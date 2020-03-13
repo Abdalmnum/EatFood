@@ -7,6 +7,11 @@ public class SizeModel {
     public SizeModel() {
     }
 
+    public SizeModel(String name, Long price) {
+        this.name = name;
+        this.price = price;
+    }
+
     public String getName() {
         return name;
     }

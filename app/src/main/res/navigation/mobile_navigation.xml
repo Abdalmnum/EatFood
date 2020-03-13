@@ -12,16 +12,16 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.eatfoodv2.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_menu"
+        android:name="com.example.eatfoodv2.ui.menu.MenuFragment"
+        android:label="@string/menu_menu"
+        tools:layout="@layout/fragment_menu" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.eatfoodv2.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_food_detail"
+        android:name="com.example.eatfoodv2.ui.fooddetials.FoodDetialFragment"
+        android:label="@string/menu_food_detail"
+        tools:layout="@layout/fragment_food_detail" />
 
     <fragment
         android:id="@+id/nav_tools"
@@ -36,8 +36,8 @@
         tools:layout="@layout/fragment_share" />
 
     <fragment
-        android:id="@+id/nav_send"
-        android:name="com.example.eatfoodv2.ui.send.SendFragment"
-        android:label="@string/menu_send"
-        tools:layout="@layout/fragment_send" />
+        android:id="@+id/nav_food_list"
+        android:name="com.example.eatfoodv2.ui.foodlist.FoodListFragment"
+        android:label="@string/menu_food_list"
+        tools:layout="@layout/fragment_food_list" />
 </navigation>

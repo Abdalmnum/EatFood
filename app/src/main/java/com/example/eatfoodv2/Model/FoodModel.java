@@ -3,22 +3,28 @@ package com.example.eatfoodv2.Model;
 import java.util.List;
 
 public class FoodModel {
-    private String name,image,id,description;
+    private String name, image, id, description;
     private Long Price;
     private List<AddonModel> addon;
-    private List<SizeModel> sizeModelList;
+    private List<SizeModel> size;
+    private String key;
+    private Double ratingValue;
+    private Long ratingCount;
+
+    private List<AddonModel> userSelectedAddon;
+    public SizeModel userSelectedSize;
 
     public FoodModel() {
     }
 
-    public FoodModel(String name, String image, String id, String description, Long price, List<AddonModel> addon, List<SizeModel> sizeModelList) {
+    public FoodModel(String name, String image, String id, String description, Long price, List<AddonModel> addon, List<SizeModel> size) {
         this.name = name;
         this.image = image;
         this.id = id;
         this.description = description;
         Price = price;
         this.addon = addon;
-        this.sizeModelList = sizeModelList;
+        this.size = size;
     }
 
     public String getName() {
@@ -69,11 +75,52 @@ public class FoodModel {
         this.addon = addon;
     }
 
-    public List<SizeModel> getSizeModelList() {
-        return sizeModelList;
+
+    public List<SizeModel> getSize() {
+        return size;
     }
 
-    public void setSizeModelList(List<SizeModel> sizeModelList) {
-        this.sizeModelList = sizeModelList;
+    public void setSize(List<SizeModel> size) {
+        this.size = size;
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
+
+    public Double getRatingValue() {
+        return ratingValue;
+    }
+
+    public void setRatingValue(Double ratingValue) {
+        this.ratingValue = ratingValue;
+    }
+
+    public Long getRatingCount() {
+        return ratingCount;
+    }
+
+    public void setRatingCount(Long ratingCount) {
+        this.ratingCount = ratingCount;
+    }
+
+    public List<AddonModel> getUserSelectedAddon() {
+        return userSelectedAddon;
+    }
+
+    public void setUserSelectedAddon(List<AddonModel> userSelectedAddon) {
+        this.userSelectedAddon = userSelectedAddon;
+    }
+
+    public SizeModel getUserSelectedSize() {
+        return userSelectedSize;
+    }
+
+    public void setUserSelectedSize(SizeModel userSelectedSize) {
+        this.userSelectedSize = userSelectedSize;
     }
 }

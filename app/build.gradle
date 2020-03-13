@@ -79,4 +79,13 @@ dependencies {
 
     implementation 'androidx.multidex:multidex:2.0.1'
 
+
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    //add Elegant Number Button
+
+    implementation 'com.cepheuen.elegant-number-button:lib:1.0.2'
+    implementation 'com.github.andremion:counterfab:1.2.0'
+
+
 }

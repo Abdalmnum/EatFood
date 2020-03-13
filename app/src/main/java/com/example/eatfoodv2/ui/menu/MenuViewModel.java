@@ -20,7 +20,7 @@ public class MenuViewModel extends ViewModel implements ICatagoryCallbackListene
 
     private MutableLiveData<List<CatagoryModel>> catagoryListMultible;
 
-    private MutableLiveData<String> massageErorr;
+    private MutableLiveData<String> massageErorr = new MutableLiveData<>();
 
     private ICatagoryCallbackListener iCatagoryCallbackListener;
 
@@ -49,12 +49,16 @@ public class MenuViewModel extends ViewModel implements ICatagoryCallbackListene
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                for(DataSnapshot itemSnapShot:dataSnapshot.getChildren())
-                {
-                    CatagoryModel catagoryModel = dataSnapshot.getValue(CatagoryModel.class);
-                    catagoryModel.setMenu_id(String.valueOf(dataSnapshot));
+                for (DataSnapshot itemSnapShot : dataSnapshot.getChildren()) {
+                    CatagoryModel catagoryModel = itemSnapShot.getValue(CatagoryModel.class);
+                    catagoryModel.setMenu_id(itemSnapShot.getKey());
+                    tmpList.add(catagoryModel);
+
+
 
                 }
+
+                iCatagoryCallbackListener.onCatagoryLoadSuccess(tmpList);
             }
 
             @Override
@@ -69,7 +73,7 @@ public class MenuViewModel extends ViewModel implements ICatagoryCallbackListene
     }
 
     @Override
-    public void onCatagoryLoadSuccess(List<CatagoryModel> CatagoryModels) {
+    public void onCatagoryLoadSuccess(List<CatagoryModel> CatagoryModels)  {
         catagoryListMultible.setValue(CatagoryModels);
     }
 
